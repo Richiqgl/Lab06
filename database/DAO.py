@@ -71,6 +71,8 @@ class DAO:
                     FROM go_products gp """
             cursor.execute(query)
             result =cursor.fetchall()
+            cursor.close()
+            cnx.close()
             return result
         except Exception:
             return None
